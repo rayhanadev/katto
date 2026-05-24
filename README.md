@@ -161,25 +161,13 @@ katto -D --dry-run
 bun install
 bun run dev
 bun run build
-bun run check
 ```
 
 Useful scripts:
 
 - `bun run dev` runs the TypeScript entry directly.
-- `bun run build` bundles the CLI into `dist/`.
-- `bun run check` runs typecheck and lint.
-- `bun run format` formats the project.
-
-## Release
-
-```bash
-bun run check
-bun run build
-npm pack --dry-run
-```
-
-Publishing should run `prepack`, which rebuilds `dist/` before the package is packed.
+- `bun run build` bundles the CLI into `dist/` using tsdown.
+- `bun run <lint|format|typecheck>` runs lint, format, or typecheck.
 
 ## License
 
